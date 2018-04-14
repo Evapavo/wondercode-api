@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const sourceSchema = new mongoose.Schema({
-    type: {
+    sourceType: {
         type: String,
+        enum: ['FILMS','FIGURES','BOOKS','MENTORS'],
         required: [true, 'The source type is required']
     },
     name: {
