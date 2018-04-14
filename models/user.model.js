@@ -3,10 +3,8 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 const SALT_WORK_FACTOR = 10;
 
-const FIRST_ADMIN = 'admin@admin.com'
 const ROLE_ADMIN = 'ADMIN';
 const ROLE_USER = 'USER';
-
 
 const userSchema = new mongoose.Schema({
   email: {
