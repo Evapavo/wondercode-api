@@ -33,11 +33,3 @@ Source.create(sources)
     console.error("Seeds error:", sources);
     mongoose.connection.close();
   });
-
-
-
-  //"specs": [
-    //"1080p Display",
-    //"2GB RAM"
-  // ]
-// },
