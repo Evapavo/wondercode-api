@@ -6,7 +6,7 @@ const sources = [
   {
     "name": "Hidden Figures",
     "sourceType": "FILMS",
-    "image": "http://shaw.sg/Images/Film/DH473/m-hiddenfigures-v2.jpg",
+    "image": "https://www.countryarts.org.au/wp-content/uploads/2017/01/hidden-figures-vertical.jpg",
     "url": "http://shaw.sg/Images/Film/DH473/m-hiddenfigures-v2.jpg"
   },
   {
