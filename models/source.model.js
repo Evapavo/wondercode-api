@@ -5,7 +5,7 @@ const Schema   = mongoose.Schema;
 const sourceSchema = new mongoose.Schema({
     sourceType: {
         type: String,
-        enum: ['FILMS','FIGURES','BOOKS','MENTORS'],
+        enum: ['FILMS','FIGURES','BOOKS','MENTORS','QUOTES'],
         required: [true, 'The source type is required']
     },
     name: {
@@ -20,10 +20,10 @@ const sourceSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
-    //specs: {
-        //type: [String],
-        //default: []
-    //}
+    text: {
+      type: String,
+        default: ''
+    }
 }, {
     timestamps: true,
     toJSON: {
