@@ -21,9 +21,15 @@ const sourceSchema = new mongoose.Schema({
         default: ''
     },
     text: {
-      type: String,
+        type: String,
+        default: ''
+    },
+
+    description: {
+        type: String,
         default: ''
     }
+
 }, {
     timestamps: true,
     toJSON: {
