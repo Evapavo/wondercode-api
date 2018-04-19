@@ -43,10 +43,6 @@ userSchema.pre('save', function save(next) {
     return next();
   }
 
-  if (user.isAdmin()) {
-       user.role = 'ADMIN';
-   }
-
   bcrypt.genSalt(SALT_WORK_FACTOR)
     .then(salt => {
       bcrypt.hash(user.password, salt)
@@ -62,10 +58,10 @@ userSchema.pre('save', function save(next) {
 userSchema.methods.checkPassword = function (password) {
   return bcrypt.compare(password, this.password);
 }
-
-userSchema.methods.isAdmin = function() {
-    return this.username === FIRST_ADMIN || this.role === ROLE_ADMIN;
-};
+//
+// userSchema.methods.isAdmin = function() {
+//     return this.username === FIRST_ADMIN || this.role === ROLE_ADMIN;
+// };
 
 
 const User = mongoose.model('User', userSchema );
